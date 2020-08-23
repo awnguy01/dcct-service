@@ -2,7 +2,7 @@ package com.dcct.dcctservice.controllers;
 
 import java.util.List;
 
-import com.dcct.dcctservice.models.Member;
+import com.dcct.dcctservice.models.MemberObject;
 import com.dcct.dcctservice.services.MemberService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +20,8 @@ public class MemberController {
     MemberService memberService;
 
     @GetMapping("/members")
-    public ResponseEntity<List<Member>> getMembers(@RequestParam(value = "nganh", required = false) String nganh) {
-        List<Member> memberList = memberService.getMembers(nganh);
+    public ResponseEntity<List<MemberObject>> getMembers(@RequestParam(value = "nganh", required = false) String nganh) {
+        List<MemberObject> memberList = memberService.getMembers(nganh);
         return ResponseEntity.ok(memberList);
     }
 

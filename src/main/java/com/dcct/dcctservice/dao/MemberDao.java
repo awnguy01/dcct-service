@@ -2,8 +2,8 @@ package com.dcct.dcctservice.dao;
 
 import java.util.List;
 
-import com.dcct.dcctservice.models.Member;
+import com.dcct.dcctservice.models.MemberObject;
 
 public interface MemberDao {
-    List<Member> getMembers();
+    List<MemberObject> getMembers();
 }

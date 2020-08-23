@@ -3,7 +3,7 @@ package com.dcct.dcctservice.services.impl;
 import java.util.List;
 
 import com.dcct.dcctservice.dao.MemberDao;
-import com.dcct.dcctservice.models.Member;
+import com.dcct.dcctservice.models.MemberObject;
 import com.dcct.dcctservice.services.MemberService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,7 @@ public class MemberServiceImpl implements MemberService {
     MemberDao memberDao;
 
     @Override
-    public List<Member> getMembers(String nganh) {
+    public List<MemberObject> getMembers(String nganh) {
         return memberDao.getMembers();
     }
 }
