@@ -32,7 +32,7 @@ jobs:
     - name: Restart DCCT Service
       uses: garygrossgarten/github-action-ssh@v0.5.0
       with:
-        host: ${{ secretes.DCCT_REMOTE_HOST }}
+        host: ${{ secrets.DCCT_REMOTE_HOST }}
         username: ${{ secrets.DCCT_REMOTE_USER }}
         privateKey: ${{ secrets.DCCT_SSH_KEY }}
         command: sudo systemctl restart dcct.service
