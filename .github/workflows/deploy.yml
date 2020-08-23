@@ -28,4 +28,4 @@ jobs:
         SSH_PRIVATE_KEY: ${{ secrets.DCCT_SSH_KEY }}
         REMOTE_HOST: ${{ secrets.DCCT_REMOTE_HOST }}
         REMOTE_USER: ${{ secrets.DCCT_REMOTE_USER }}
-        TARGET: /usr/lib/dcct-service/
+        TARGET: ${{ secrets.DCCT_TARGET }}
