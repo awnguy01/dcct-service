@@ -4,6 +4,7 @@
 name: Java CI with Maven
 
 on:
+  workflow_dispatch:
   push:
     branches: [ master ]
 
@@ -21,7 +22,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: SSH deploy to server
-      uses: easingthemes/ssh-deploy
+      uses: easingthemes/ssh-deploy@v2.1.4
       with: 
         SSH_PRIVATE_KEY: ${{ secrets.DCCT_SSH_KEY }}
         REMOTE_HOST: ${{ secrets.DCCT_REMOTE_HOST }}
